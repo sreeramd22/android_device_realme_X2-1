@@ -2,14 +2,15 @@
 
 hidl_interface {
     name: "vendor.oppo.hardware.biometrics.fingerprint@2.1",
-    root: "vendor.oppo.hardware",
+    root: "vendor",
     srcs: [
+        "types.hal",
         "IBiometricsFingerprint.hal",
         "IBiometricsFingerprintClientCallback.hal",
-        "types.hal",
     ],
     interfaces: [
         "android.hidl.base@1.0",
     ],
-    gen_java: false,
+    gen_java: true,
 }
+
