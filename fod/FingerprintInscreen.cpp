@@ -62,6 +62,7 @@ namespace V1_0 {
 namespace implementation {
 
 FingerprintInscreen::FingerprintInscreen() {
+    this->mOppoBiometricsFingerprint = IBiometricsFingerprint::getService();
 }
 
 Return<int32_t> FingerprintInscreen::getPositionX() {
