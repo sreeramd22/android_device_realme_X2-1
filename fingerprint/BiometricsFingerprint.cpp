@@ -23,7 +23,6 @@
 #include <inttypes.h>
 #include <unistd.h>
 #include <utils/Log.h>
-#include <thread>
 
 namespace android {
 namespace hardware {
@@ -33,12 +32,7 @@ namespace V2_1 {
 namespace implementation {
 
 BiometricsFingerprint::BiometricsFingerprint() {
-    for(int i=0; i<10; i++) {
-        mOppoBiometricsFingerprint = vendor::oppo::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprint::tryGetService();
-        if(mOppoBiometricsFingerprint != nullptr) break;
-        sleep(10);
-    }
-    if(mOppoBiometricsFingerprint == nullptr) exit(0);
+    mOppoBiometricsFingerprint = vendor::oppo::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprint::getService();
 }
 
 static bool receivedCancel;
