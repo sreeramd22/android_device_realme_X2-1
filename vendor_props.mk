@@ -64,9 +64,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RCS and IMS
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.ims_volte_enable=1 \
+    persist.data.iwlan.enable=true \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.radio.calls.on.ims=1 \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
+    persist.radio.rat_on=combine \
     persist.rcs.supported=1 \
+    persist.radio.data_ltd_sys_ind=1 \
+    persist.radio.data_con_rprt=1 \
     persist.vendor.ims.disableQXDMLogs=0 \
     persist.vendor.ims.disableADBLogs=0 \
     persist.vendor.ims.disableDebugLogs=0 \
@@ -77,13 +84,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
+    gsm.lte.ca.support=1 \
     persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.lte_vrte_ltd=1 \
     persist.vendor.radio.cs_srv_type=1 \
+    persist.radio.multisim.config=dsds \
     persist.vendor.radio.rat_on=combine \
     ril.subscription.types=NV,RUIM \
     persist.radio.add_power_save=1 \
-    ro.telephony.default_network=22,18 \
+    persist.radio.VT_ENABLE=1 \
+    persist.radio.volte.dan_support=true \
+    persist.data.iwlan=1 \
+    persist.data.iwlan.ipsec.ap=1 \
+    persist.sys.cust.lte_config=true \
+    ro.telephony.default_network=22,22 \
     telephony.lteOnCdmaDevice=1
 
 # Sensors
