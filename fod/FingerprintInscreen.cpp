@@ -33,6 +33,8 @@
 #define FP_SIZE 190
 #define FP_BEGIN 1
 #define FP_ENDIT 0
+#define HBM_OFF_DELAY 50
+#define HBM_ON_DELAY 320
 
 namespace {
 
@@ -85,6 +87,18 @@ Return<void> FingerprintInscreen::onStartEnroll() {
 
 Return<void> FingerprintInscreen::onFinishEnroll() {
     return Void();
+}
+
+Return<int32_t> FingerprintInscreen::getHbmOffDelay() {
+    return HBM_OFF_DELAY;
+}
+
+Return<int32_t> FingerprintInscreen::getHbmOnDelay() {
+    return HBM_ON_DELAY;
+}
+
+Return<bool> FingerprintInscreen::supportsAlwaysOnHBM() {
+    return true;
 }
 
 Return<void> FingerprintInscreen::switchHbm(bool enabled) {
