@@ -193,18 +193,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.x2
 
-<<<<<<< HEAD
-# Q Prebuilts
-PRODUCT_COPY_FILES += \
-    $(PREBUILT_DVC_PATH)/Hals/lib/android.hardware.sensors@1.0-impl.x2.so:system/lib/hw/android.hardware.sensors@1.0-impl.x2.so \
-    $(PREBUILT_DVC_PATH)/Hals/lib64/android.hardware.sensors@1.0-impl.x2.so:system/lib64/hw/android.hardware.sensors@1.0-impl.x2.so \
-    $(PREBUILT_DVC_PATH)/Hals/lib64/power.qcom.so:system/lib64/hw/power.qcom.so
-
-PRODUCT_PACKAGES += \
-    multihal_x2
-
-=======
->>>>>>> parent of 760658f... X2: use X2-prebuilts for holding non aosp-specific prebuilts
 # RCS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
