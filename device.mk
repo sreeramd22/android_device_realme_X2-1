@@ -15,9 +15,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/realme/x2/x2-vendor.mk)
 
-# Prebuilts Path
-PREBUILT_DVC_PATH := device/realme/x2-prebuilts
-
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
@@ -59,10 +56,6 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothQti
-
-# Bootanimation
-PRODUCT_COPY_FILES += \
-    $(PREBUILT_DVC_PATH)/BootAnimation/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -122,17 +115,9 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml
 
-# Apn Config
-PRODUCT_COPY_FILES += \
-    $(PREBUILT_DVC_PATH)/Configs/apns-conf.xml:system/etc/apns-conf.xml
-
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:/system/usr/keylayout/gpio-keys.kl
-
-# Kernel Prebuilt
-PRODUCT_COPY_FILES += \
-    $(PREBUILT_DVC_PATH)/Kernel/kernel:kernel
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -151,8 +136,8 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # Power
-# PRODUCT_PACKAGES += \
-#    power.qcom:64
+PRODUCT_PACKAGES += \
+    power.qcom:64
 
 # QTI
 PRODUCT_COPY_FILES += \
@@ -165,8 +150,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Sensors Hal
-#PRODUCT_PACKAGES += \
-#    android.hardware.sensors@1.0-impl.x2
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl.x2
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -208,6 +193,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.x2
 
+<<<<<<< HEAD
 # Q Prebuilts
 PRODUCT_COPY_FILES += \
     $(PREBUILT_DVC_PATH)/Hals/lib/android.hardware.sensors@1.0-impl.x2.so:system/lib/hw/android.hardware.sensors@1.0-impl.x2.so \
@@ -217,6 +203,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     multihal_x2
 
+=======
+>>>>>>> parent of 760658f... X2: use X2-prebuilts for holding non aosp-specific prebuilts
 # RCS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
