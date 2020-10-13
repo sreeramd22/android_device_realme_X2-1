@@ -6,11 +6,11 @@
 
 $(call inherit-product, device/realme/x2/device.mk)
 
-# Inherit some common Xtended stuff.
-$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
+# Inherit some common PixysOS stuff.
+$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := xtended_x2
+PRODUCT_NAME := pixys_x2
 PRODUCT_DEVICE := x2
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme x2
@@ -21,8 +21,3 @@ BUILD_FINGERPRINT := "realme/RMX1992/RMX1992L1:10/QKQ1.191201.002/1592194586:use
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
-# Xtension
-XTENDED_BUILD_TYPE := OFFICIAL
-
-#Maintainer
-XTENDED_MAINTAINER := SreeRamD
