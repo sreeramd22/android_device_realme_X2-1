@@ -5,7 +5,7 @@
 #
 
 BOARD_VENDOR := realme
-DEVICE_PATH := device/realme/X2
+DEVICE_PATH := device/realme/x2
 
 #Broken Rules
 BUILD_BROKEN_DUP_RULES := true
@@ -161,4 +161,4 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Inherit from the proprietary version
--include vendor/realme/X2/BoardConfigVendor.mk
+-include vendor/realme/x2/BoardConfigVendor.mk
