@@ -8,10 +8,10 @@ $(call inherit-product, device/realme/X2/device.mk)
 
 # Inherit some common Evolution X stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
+$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := xtended_X2
+PRODUCT_NAME := pixys_X2
 PRODUCT_DEVICE := X2
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme X2
@@ -24,9 +24,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := google/coral/coral:11/RP1A.201005.004/6782484:user/release-keys
-
-# Xtension
-XTENDED_BUILD_TYPE := OFFICIAL
-
-#Maintainer
-XTENDED_MAINTAINER := SreeRamD

@@ -1175,10 +1175,11 @@
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>org.lineageos.settings.device.KeyHandler</item>
         <item>com.android.touch.gestures.KeyHandler</item>
+    </string-array>
     <!-- Whether device supports an alt. ambient display -->
     <bool name="config_alt_ambient_display">true</bool>
 
     <!-- Enable face auth when swiping security view -->
     <bool name="config_faceAuthOnSecurityView">true</bool>
-    </string-array>
+    
 </resources>

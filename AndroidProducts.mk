@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/xtended_X2.mk
+    $(LOCAL_DIR)/pixys_X2.mk
